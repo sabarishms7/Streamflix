@@ -1,0 +1,199 @@
+body{
+
+background:#141414;
+
+color:white;
+
+font-family:Arial,sans-serif;
+
+padding:30px;
+
+}
+
+
+h1{
+
+text-align:center;
+
+color:#e50914;
+
+margin-bottom:30px;
+
+}
+
+
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+background:#222;
+
+}
+
+
+
+th{
+
+background:#e50914;
+
+padding:15px;
+
+}
+
+
+
+td{
+
+padding:15px;
+
+text-align:center;
+
+border:1px solid #444;
+
+}
+
+
+
+button{
+
+padding:8px 15px;
+
+border:none;
+
+border-radius:5px;
+
+cursor:pointer;
+
+}
+
+
+
+.block{
+
+background:red;
+
+color:white;
+
+}
+
+
+
+.unblock{
+
+background:green;
+
+color:white;
+
+}
+
+
+
+.remove{
+
+background:#800000;
+
+color:white;
+
+margin-left:5px;
+
+}
+
+
+
+.export-btn{
+
+background:#28a745;
+
+color:white;
+
+padding:12px 20px;
+
+border-radius:8px;
+
+margin-bottom:20px;
+
+font-size:16px;
+
+}
+
+
+.export-btn:hover{
+
+background:#218838;
+
+}
+.back-btn{
+
+    background:#e50914;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    margin-bottom:20px;
+
+    margin-right:10px;
+    margin-top:  20px;
+
+    font-size:16px;
+
+}
+
+.back-btn:hover{
+
+    background:#ff3030;
+
+}
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction:column;
+        padding:15px;
+        gap:10px;
+    }
+
+    .menu{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .movie-card img{
+        height:220px;
+    }
+
+    .profile-container,
+    .login-container,
+    .register-container{
+        width:95%;
+        padding:20px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+}

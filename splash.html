@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamFlix Loading</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{   
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:
+linear-gradient(
+rgba(0,0,0,.8),
+rgba(0,0,0,.9)
+),
+url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+background-size:cover;
+background-position:center;
+overflow:hidden;
+}
+
+/* Logo */
+
+.logo{
+
+font-size:90px;
+font-weight:900;
+color:#e50914;
+
+text-transform:uppercase;
+
+letter-spacing:5px;
+
+animation:
+zoomIn 2s ease,
+glow 2s infinite alternate;
+
+text-shadow:
+0 0 10px #e50914,
+0 0 20px #e50914,
+0 0 40px #e50914;
+
+}
+
+/* Subtitle */
+
+.subtitle{
+
+color:white;
+
+font-size:22px;
+
+margin-top:15px;
+
+letter-spacing:3px;
+
+opacity:0;
+
+animation:
+fadeIn 2s forwards;
+
+animation-delay:1s;
+
+}
+
+/* Loading Bar */
+
+.loader{
+
+width:350px;
+
+height:8px;
+
+background:#222;
+
+border-radius:20px;
+
+margin-top:50px;
+
+overflow:hidden;
+
+}
+
+.loader-bar{
+
+height:100%;
+
+width:0;
+
+background:#e50914;
+
+animation:
+load 5s linear forwards;
+
+}
+
+/* Animations */
+
+@keyframes zoomIn{
+
+0%{
+transform:scale(0);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:
+0 0 10px #e50914,
+0 0 20px #e50914;
+
+}
+
+to{
+
+text-shadow:
+0 0 20px #e50914,
+0 0 40px #e50914,
+0 0 80px #e50914;
+
+}
+
+}
+
+@keyframes fadeIn{
+
+to{
+opacity:1;
+}
+
+}
+
+@keyframes load{
+
+from{
+width:0;
+}
+
+to{
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="logo">
+STREAMFLIX
+</div>
+
+<div class="subtitle">
+Unlimited Movies • TV Shows • Premium Entertainment
+</div>
+
+<div class="loader">
+<div class="loader-bar"></div>
+</div>
+
+<script>
+
+setTimeout(function(){
+
+window.location.href="login.html";
+
+},5000);
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+  "name":"John",
+  "email":"john@gmail.com",
+  "password":"sabarish",
+  "subscription":"Premium",
+  "title":"Oppenheimer",
+  "type":"Premium",
+  "genre":"Science Fiction",
+  "rating":"8.8"
+}

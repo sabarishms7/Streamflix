@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StreamFlix</title>
+
+<link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <div class="logo">STREAMFLIX</div>
+
+   <div class="menu">
+
+    <a href="movies.html">Movies</a>
+
+    <a href="tvshows.html">Webseries</a>
+
+    <a href="subscription.html">Premium</a>
+
+    <a href="profile.html" class="profile-btn">
+        👤 Profile
+    </a>
+
+    <button id="premiumBtn"
+            onclick="openPremiumDetails()">
+        💎 Premium User
+    </button>
+
+    <button id="logoutBtn">
+        Logout
+    </button>
+
+</div>
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-slider">
+
+        <img src="Avatar 2.jpg">
+        <img src="strangerthings.jpg">
+        <img src="wednesday.jpg">
+        <img src="titanic.jpg">
+        <img src="tenet.jpg">
+        <img src="theboys.jpg">
+        <img src="Oppenheimer.jpg">
+        <img src="rip.jpg">
+        <img src="batman.jpg">
+        <img src="avatarwater.jpg">
+
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <!-- User Welcome -->
+
+        <h1 id="welcomeUser">
+            Welcome
+        </h1>
+
+        <p>
+            Unlimited Movies, TV Shows and Premium Entertainment
+        </p>
+
+        <button class="watch-btn"
+                onclick="scrollToTrending()">
+            Watch Now
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Trending Movies -->
+
+<section class="section" id="trendingMovies">
+
+    <h2>🔥 Trending Movies</h2>
+
+    <div class="slider">
+
+
+            <div class="movie-card"
+                 onclick="playMovie('Avatar2.mp4')">
+                <img src="Avatar 2.jpg">
+            </div>
+
+            <div class="movie-card">
+                <img src="journey2.jpg">
+            </div>
+
+            <div class="movie-card">
+                <img src="rip.jpg">
+            </div>
+
+            <div class="movie-card">
+                <img src="him.jpg">
+            </div>
+
+            <div class="movie-card">
+                <img src="mutty.jpg">
+
+    </div>
+
+</section>
+
+<!-- Top Movies Section -->
+
+<section class="section">
+
+    <h2>🎬 Top Movies</h2>
+
+    <div class="grid">
+
+        <div class="movie-card"
+             onclick="playMovie('movies/inception.mp4')">
+
+            <img src="Inception.jpg">
+
+            <div class="movie-title">
+                Inception
+            </div>
+
+        </div>
+
+        <div class="movie-card"
+             onclick="playMovie('movies/titanic.mp4')">
+
+            <img src="titanic.jpg">
+
+            <div class="movie-title">
+                Titanic
+            </div>
+
+        </div>
+
+        <div class="movie-card"
+             onclick="playMovie('movies/gladiator.mp4')">
+
+            <img src="gladiator.jpg">
+
+            <div class="movie-title">
+                Gladiator
+            </div>
+
+        </div>
+
+        <div class="movie-card"
+             onclick="playMovie('movies/matrix.mp4')">
+
+            <img src="matrix.jpg">
+
+            <div class="movie-title">
+                Matrix
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Premium Movies -->
+
+<section class="section">
+
+<h2>💎 Premium Collection</h2>
+
+
+<div class="grid">
+
+
+
+<div class="movie-card"
+onclick="playMovie('movies/dune.mp4')">
+
+<img src="dune2.jpg">
+
+
+
+</div>
+<div class="movie-card"
+onclick="playMovie('movies/oppenheimer.mp4')">
+
+<img src="Oppenheimer.jpg">
+</div>
+
+<div class="movie-card"
+onclick="playMovie('movies/johnwick4.mp4')">
+
+<img src="johnwick.jpg">
+
+</div>
+
+<div class="movie-card"
+onclick="playMovie('movies/batman.mp4')">
+
+<img src="batman.jpg">
+
+</div>
+
+<div class="movie-card"
+onclick="playMovie('movies/topgun.mp4')">
+
+<img src="topgun.jpg">
+
+</div>
+
+<div class="movie-card"
+onclick="playMovie('movies/avatar.mp4')">
+
+<img src="avatarwater.jpg">
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+<!-- Video Player Popup -->
+
+<div id="movieModal" class="modal">
+
+
+<span class="close"
+onclick="closeMovie()">
+
+✖
+
+</span>
+
+
+
+<video id="moviePlayer"
+controls
+autoplay>
+
+
+<source id="movieSource"
+src="">
+
+
+</video>
+
+
+
+</div>
+</section>
+
+<!-- Video Popup -->
+
+<div id="movieModal" class="modal">
+
+    <span class="close"
+          onclick="closeMovie()">
+          ✖
+    </span>
+
+    <video id="moviePlayer"
+           controls
+           autoplay>
+
+        <source id="movieSource">
+
+    </video>
+
+</div>
+
+<script src="home.js"></script>
+<div id="premiumModal" class="premium-modal">
+
+    <div class="premium-box">
+
+        <span class="close-btn"
+              onclick="closePremiumDetails()">
+              ✖
+        </span>
+
+        <h2>Premium Membership</h2>
+
+        <div id="premiumDetails"></div>
+
+    </div>
+
+</div>
+<script src="home.js"></script>
+<!-- Copyright Footer -->
+
+<footer class="copyright-footer">
+
+
+<div class="footer-logo">
+STREAMFLIX
+</div>
+
+
+<p>
+
+© 2026 StreamFlix. All Rights Reserved.
+
+</p>
+
+
+<div class="footer-links">
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Terms & Conditions</a>
+
+<a href="#">Contact Us</a>
+
+</div>
+
+
+</footer>
+</div>
+</body>
+</html>

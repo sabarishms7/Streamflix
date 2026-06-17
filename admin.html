@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StreamFlix Admin Panel</title>
+
+<link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+
+<h1>STREAMFLIX ADMIN PANEL</h1>
+
+
+<button onclick="exportToExcel()" class="export-btn">
+📊 Export To Excel
+</button>
+
+
+
+<table id="userTable">
+
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Premium</th>
+
+<th>Plan</th>
+
+<th>Amount</th>
+
+<th>Start Date</th>
+
+<th>Expiry Date</th>
+
+<th>Action</th>
+
+
+</tr>
+
+</thead>
+
+
+<tbody id="userData"></tbody>
+
+
+</table>
+
+
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
+<button
+onclick="goBackToLogin()"
+class="back-btn">
+
+⬅ Back To Login
+
+</button>
